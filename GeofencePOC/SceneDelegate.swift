@@ -12,7 +12,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
     let locationManager = CLLocationManager()
-
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
@@ -57,10 +57,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 extension SceneDelegate: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
-        print("entered")
+        let type = occurenceType.entered
+        let tracker = GeofenceTracker()
+        tracker.addGeofenceEntry(with: type)
+
     }
     
     func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
-        print("left")
+        let type = occurenceType.left
+        let tracker = GeofenceTracker()
+        tracker.addGeofenceEntry(with: type)
     }
 }

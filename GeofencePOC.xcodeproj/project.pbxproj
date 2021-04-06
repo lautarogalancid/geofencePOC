@@ -14,7 +14,10 @@
 		186B38B5261B4CD400D4FBF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 186B38B4261B4CD400D4FBF6 /* Assets.xcassets */; };
 		186B38B8261B4CD400D4FBF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 186B38B6261B4CD400D4FBF6 /* LaunchScreen.storyboard */; };
 		186B38CE261B4CD500D4FBF6 /* GeofencePOCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186B38CD261B4CD400D4FBF6 /* GeofencePOCUITests.swift */; };
-		186B38E5261B5EDE00D4FBF6 /* GeofenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186B38E4261B5EDE00D4FBF6 /* GeofenceTests.swift */; };
+		18CBC9BB261BE64D00DFCC84 /* GeofenceTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CBC9BA261BE64D00DFCC84 /* GeofenceTrackerTests.swift */; };
+		18CBC9C0261BE67100DFCC84 /* GeofenceTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CBC9BF261BE67100DFCC84 /* GeofenceTracker.swift */; };
+		18CBC9C7261BE9B400DFCC84 /* Occurrence+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CBC9C5261BE9B300DFCC84 /* Occurrence+CoreDataClass.swift */; };
+		18CBC9D6261C665B00DFCC84 /* ErrorTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CBC9D5261C665B00DFCC84 /* ErrorTracker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +51,11 @@
 		186B38C9261B4CD400D4FBF6 /* GeofencePOCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeofencePOCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		186B38CD261B4CD400D4FBF6 /* GeofencePOCUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofencePOCUITests.swift; sourceTree = "<group>"; };
 		186B38CF261B4CD500D4FBF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		186B38E4261B5EDE00D4FBF6 /* GeofenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofenceTests.swift; sourceTree = "<group>"; };
+		18CBC9B1261BE5F300DFCC84 /* GeofencePOCTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GeofencePOCTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		18CBC9BA261BE64D00DFCC84 /* GeofenceTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofenceTrackerTests.swift; sourceTree = "<group>"; };
+		18CBC9BF261BE67100DFCC84 /* GeofenceTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofenceTracker.swift; sourceTree = "<group>"; };
+		18CBC9C5261BE9B300DFCC84 /* Occurrence+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Occurrence+CoreDataClass.swift"; sourceTree = "<group>"; };
+		18CBC9D5261C665B00DFCC84 /* ErrorTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTracker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +106,8 @@
 		186B38A7261B4CD300D4FBF6 /* GeofencePOC */ = {
 			isa = PBXGroup;
 			children = (
+				18CBC9E1261C6D5600DFCC84 /* Service */,
+				18CBC9C4261BE97000DFCC84 /* Model */,
 				186B38A8261B4CD300D4FBF6 /* AppDelegate.swift */,
 				186B38AA261B4CD300D4FBF6 /* SceneDelegate.swift */,
 				186B38AC261B4CD300D4FBF6 /* ViewController.swift */,
@@ -106,6 +115,8 @@
 				186B38B6261B4CD400D4FBF6 /* LaunchScreen.storyboard */,
 				186B38B9261B4CD400D4FBF6 /* Info.plist */,
 				186B38B1261B4CD400D4FBF6 /* GeofencePOC.xcdatamodeld */,
+				18CBC9BF261BE67100DFCC84 /* GeofenceTracker.swift */,
+				18CBC9D5261C665B00DFCC84 /* ErrorTracker.swift */,
 			);
 			path = GeofencePOC;
 			sourceTree = "<group>";
@@ -114,7 +125,8 @@
 			isa = PBXGroup;
 			children = (
 				186B38C4261B4CD400D4FBF6 /* Info.plist */,
-				186B38E4261B5EDE00D4FBF6 /* GeofenceTests.swift */,
+				18CBC9B1261BE5F300DFCC84 /* GeofencePOCTests-Bridging-Header.h */,
+				18CBC9BA261BE64D00DFCC84 /* GeofenceTrackerTests.swift */,
 			);
 			path = GeofencePOCTests;
 			sourceTree = "<group>";
@@ -126,6 +138,21 @@
 				186B38CF261B4CD500D4FBF6 /* Info.plist */,
 			);
 			path = GeofencePOCUITests;
+			sourceTree = "<group>";
+		};
+		18CBC9C4261BE97000DFCC84 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				18CBC9C5261BE9B300DFCC84 /* Occurrence+CoreDataClass.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		18CBC9E1261C6D5600DFCC84 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +285,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18CBC9D6261C665B00DFCC84 /* ErrorTracker.swift in Sources */,
+				18CBC9C7261BE9B400DFCC84 /* Occurrence+CoreDataClass.swift in Sources */,
+				18CBC9C0261BE67100DFCC84 /* GeofenceTracker.swift in Sources */,
 				186B38AD261B4CD300D4FBF6 /* ViewController.swift in Sources */,
 				186B38A9261B4CD300D4FBF6 /* AppDelegate.swift in Sources */,
 				186B38B3261B4CD400D4FBF6 /* GeofencePOC.xcdatamodeld in Sources */,
@@ -269,7 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				186B38E5261B5EDE00D4FBF6 /* GeofenceTests.swift in Sources */,
+				18CBC9BB261BE64D00DFCC84 /* GeofenceTrackerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,6 +506,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = lautarogalancid.GeofencePOCTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GeofencePOCTests/GeofencePOCTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -499,6 +530,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = lautarogalancid.GeofencePOCTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GeofencePOCTests/GeofencePOCTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GeofencePOC.app/GeofencePOC";
